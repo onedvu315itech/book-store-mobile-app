@@ -98,6 +98,8 @@ public class ChatInsideAdapter extends BaseAdapter<ChatEntity, ChatInsideAdapter
                 ((CustomLeftChatBinding) binding).tvOtherUserTime.setText(formattedTime);
             } else if (binding instanceof CustomRightChatBinding) {
                 ((CustomRightChatBinding) binding).tvUserText.setText(item.getMessage());
+                String formattedTime = formatTimestamp(timestamp);
+                ((CustomRightChatBinding) binding).tvUserTime.setText(formattedTime);
             }
         }
 
